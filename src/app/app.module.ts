@@ -10,6 +10,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { NavbarComponent } from './pages/partials/navbar/navbar.component';
 import { CreateStudentsComponent } from './pages/create-students/create-students.component';
 import { LoaderComponent } from './pages/partials/loader/loader.component';
+import { StudentPageComponent } from './pages/student-page/student-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoaderComponent } from './pages/partials/loader/loader.component';
     ContactPageComponent,
     NavbarComponent,
     CreateStudentsComponent,
-    LoaderComponent
+    LoaderComponent,
+    StudentPageComponent
   ],
   imports: [
     BrowserModule,
