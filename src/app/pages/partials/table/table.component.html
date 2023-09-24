@@ -1,0 +1,24 @@
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Sr</th>
+      <th *ngFor="let head of HeadArray">
+        {{ head.Head }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of GridArray; let sr = index">
+      <td>{{ sr + 1 }}</td>
+      <td *ngFor="let head of HeadArray">
+        <div *ngIf="head.FieldName != ''">
+          {{ item[head.FieldName] }}
+        </div>
+        <div *ngIf="head.FieldName == ''">
+          <button class="btn btn-outline-primary" (click)="edit(item)">Edit</button>
+          <button class="btn btn-outline-danger ms-2" (click)="delete(item)">Delete</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
